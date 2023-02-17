@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/currency-converter-react/static/css/main.60419186.css",
+    "main.js": "/currency-converter-react/static/js/main.1a16a3df.js",
+    "static/js/787.2dbbe128.chunk.js": "/currency-converter-react/static/js/787.2dbbe128.chunk.js",
+    "static/media/GTA-SA-wallpaper.jpg": "/currency-converter-react/static/media/GTA-SA-wallpaper.a38ae0f4784be6796657.jpg",
+    "index.html": "/currency-converter-react/index.html",
+    "main.60419186.css.map": "/currency-converter-react/static/css/main.60419186.css.map",
+    "main.1a16a3df.js.map": "/currency-converter-react/static/js/main.1a16a3df.js.map",
+    "787.2dbbe128.chunk.js.map": "/currency-converter-react/static/js/787.2dbbe128.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60419186.css",
+    "static/js/main.1a16a3df.js"
+  ]
+}
