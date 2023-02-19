@@ -10,7 +10,7 @@
 
 ## Demo
 
-[check my demo](https://adachkamil98.github.io/currencyConverter/)
+[check my demo](https://adachkamil98.github.io/currency-converter-react/)
 
 ## Technologies used
 
