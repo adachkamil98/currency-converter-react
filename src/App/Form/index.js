@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./style.css";
-import { currencies } from "../App/currencies";
+import { currencies } from "../currencies";
 import { Result } from "./Result";
 
 const Form = ({ calculateResult, result }) => {
@@ -11,7 +11,6 @@ const Form = ({ calculateResult, result }) => {
   const onSubmit = (event) => {
     event.preventDefault();
     calculateResult(currency, amount);
-
   }
 
   return (
@@ -61,8 +60,7 @@ const Form = ({ calculateResult, result }) => {
           Kursy NBP na dzień 19.12.2022r.
         </p>
         <p>
-          <button
-            className="form__button"
+          <button className="form__button"
           >
             Oblicz
           </button>
