@@ -14,7 +14,7 @@
 
 ## Technologies used
 
-<img src="./technologies icons/html.png" alt="HTML" width="50"> <img src="./technologies icons/css-3.png" alt="CSS" width="50"> <img src="./technologies icons/js.png" alt="JS" width="50"> <img src="./technologies icons/react.png" alt="React" width="50"> <img src="./technologies icons/babel.png" alt="Babel" width="50"> <img src="./technologies icons/webpack.png" alt="Webpack" width="50">
+<img src="./icons/html.png" alt="HTML" width="50"> <img src="./icons/css-3.png" alt="CSS" width="50"> <img src="./icons/js.png" alt="JS" width="50"> <img src="./icons/react.png" alt="React" width="50"> <img src="./icons/babel.png" alt="Babel" width="50"> <img src="./icons/webpack.png" alt="Webpack" width="50">
 
 - html
 - css

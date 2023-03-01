@@ -64,12 +64,12 @@
     background-color: hsl(43, 48%, 54%);
     border-radius: 15px;
     padding: 5px;
-    transition-duration: 600ms;
+    transition-duration: 500ms;
 }
 
 .form__button:hover {
-    background-color: hsl(43, 51%, 74%);
-    transform: scale(1.1) rotate(360deg);
+    background-color: hsl(43, 51%, 64%);
+    transform: scale(1.1);
     transition-timing-function: ease-in-out;
 }
 

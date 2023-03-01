@@ -12,7 +12,6 @@ export const Clock = () => {
         return () => {
             clearInterval(intervalId)
         };
-
     }, []);
 
     return (
