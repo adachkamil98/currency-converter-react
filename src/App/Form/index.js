@@ -1,32 +1,38 @@
 import { useState } from "react";
-import "./style.css";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
 import { Clock } from "./Clock";
+import {
+  Fieldset,
+  Legend,
+  AdditionalInfo,
+  StyledForm,
+  Select,
+  AmountInput,
+  Label,
+  Paragraph,
+  Button,
+  Footer,
+} from "./styled";
 
 const Form = ({ calculateResult, result }) => {
-
   const [currency, setCurrency] = useState(currencies[0].short);
   const [amount, setAmount] = useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
     calculateResult(currency, amount);
-  }
+  };
 
   return (
-    <form
-      className="form"
-      onSubmit={onSubmit}
-    >
+    <StyledForm onSubmit={onSubmit}>
       <Clock />
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Przelicznik walut</legend>
-        <p>
+      <Fieldset>
+        <Legend>Przelicznik walut</Legend>
+        <Paragraph>
           <label>
-            <span>* Kwota w PLN: </span>
-            <input
-              className="form__inputValue"
+            <Label>* Kwota w PLN:</Label>
+            <AmountInput
               type="number"
               required
               min="0"
@@ -37,44 +43,45 @@ const Form = ({ calculateResult, result }) => {
               onChange={({ target }) => setAmount(target.value)}
             />
           </label>
-        </p>
-        <p className="form__paragraph">Wymagane pola oznaczone są gwiazdką *</p>
-        <p>
+        </Paragraph>
+        <AdditionalInfo>
+          Wymagane pola oznaczone są gwiazdką *
+        </AdditionalInfo>
+        <Paragraph>
           <label>
-            <span> Wybierz walutę: </span>
-            <select
-              className="form__select"
+            <Label> Wybierz walutę:</Label>
+            <Select
               value={currency}
-              onChange={({ target }) => setCurrency(target.value)}
+              onChange={({ target }) =>
+                setCurrency(target.value)
+              }
             >
-              {currencies.map((currency => (
+              {currencies.map((currency) => (
                 <option
                   key={currency.short}
                   value={currency.short}
                 >
                   {currency.name}
                 </option>
-              )))}
-            </select>
+              ))}
+            </Select>
           </label>
-        </p>
-        <p className="form__rateSource">
+        </Paragraph>
+        <AdditionalInfo italic>
           Kursy NBP na dzień 19.12.2022r.
-        </p>
-        <p>
-          <button className="form__button"
-          >
-            Oblicz
-          </button>
-        </p>
+        </AdditionalInfo>
+        <Paragraph>
+          <Button>Oblicz</Button>
+        </Paragraph>
 
         <Result result={result} />
-      </fieldset>
-      <footer className="form__footer">
-        © Copyright 2022 by Kamil Adach - wszelkie prawa zastrzeżone
-      </footer>
-    </form>
-  )
+      </Fieldset>
+      <Footer>
+        © Copyright 2022 by Kamil Adach - wszelkie prawa
+        zastrzeżone
+      </Footer>
+    </StyledForm>
+  );
 };
 
 export default Form;
