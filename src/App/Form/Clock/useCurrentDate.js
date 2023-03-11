@@ -15,4 +15,5 @@ const useCurrentDate = () => {
 
   return date;
 };
+
 export default useCurrentDate;

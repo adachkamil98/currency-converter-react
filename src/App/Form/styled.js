@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { css } from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
   background-color: hsl(102, 23%, 62%);
@@ -66,6 +65,7 @@ export const AmountInput = styled.input`
 
 export const Label = styled.span`
   margin-right: 5px;
+  
   @media (max-width: 454px) {
     display: inline-block;
     margin: 5px;
