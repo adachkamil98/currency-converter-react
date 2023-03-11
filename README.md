@@ -20,6 +20,7 @@
 - css
 - js
 - react
+- custom Hooks
 - babel
 - webpack
 - create-react-app
