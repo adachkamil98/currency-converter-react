@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledClock = styled.div`
+export const Wrapper = styled.div`
   display: block;
   text-align: right;
   color: black;

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
-  background-color: hsl(102, 23%, 62%);
+  background-color: ${({ theme }) => theme.color.swampGreen};
   padding: 20px 20px 0px 20px;
   border-radius: 15px;
   overflow-x: auto;
@@ -10,7 +10,7 @@ export const StyledForm = styled.form`
 
 export const Fieldset = styled.fieldset`
   border-radius: 15px;
-  border-color: rgb(194, 162, 80);
+  border-color: ${({ theme }) => theme.color.tussock};
   border-width: 5px;
 `;
 
@@ -21,7 +21,7 @@ export const Legend = styled.legend`
   border: groove;
   border-width: 3px;
   border-radius: 15px;
-  border-color: rgb(194, 162, 80);
+  border-color: ${({ theme }) => theme.color.tussock};
 `;
 
 export const AdditionalInfo = styled.p`
@@ -36,39 +36,38 @@ export const AdditionalInfo = styled.p`
 `;
 
 export const Select = styled.select`
-  background-color: rgb(189, 211, 187);
+  margin: 3px;
+  background-color: ${({ theme }) => theme.color.paleLeaf};
   border-radius: 10px;
   border-width: 2px;
   border-style: inset;
-  border-color: -internal-light-dark(
-    rgb(118, 118, 118),
-    rgb(133, 133, 133)
-  );
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
   border-image: initial;
-  transition-duration: 600ms;
+  transition: filter 400ms;
 
   &:hover {
-    background-color: rgb(222, 238, 221);
+    filter: brightness(115%);
   }
 `;
 
 export const AmountInput = styled.input`
-  background-color: rgb(189, 211, 187);
+  background-color: ${({ theme }) => theme.color.paleLeaf};
   border-radius: 10px;
   padding: 5px;
-  transition-duration: 600ms;
+  margin: 3px;
+  transition: filter 400ms;
 
   &:hover {
-    background-color: rgb(222, 238, 221);
+    filter: brightness(115%);
   }
 `;
 
 export const Label = styled.span`
   margin-right: 5px;
-  
-  @media (max-width: 454px) {
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.maxMobileWidth}px) {
     display: inline-block;
-    margin: 5px;
+    margin-bottom: 5px;
   }
 `;
 
@@ -77,13 +76,13 @@ export const Paragraph = styled.p`
 `;
 
 export const Button = styled.button`
-  background-color: hsl(43, 48%, 54%);
+  background-color: ${({ theme }) => theme.color.tussock};
   border-radius: 15px;
   padding: 5px;
-  transition-duration: 400ms;
+  transition: 400ms;
 
   &:hover {
-    background-color: hsl(43, 51%, 64%);
+    filter: brightness(125%);
     transform: scale(1.1);
     transition-timing-function: ease-in-out;
   }

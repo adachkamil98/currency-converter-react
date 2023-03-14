@@ -44,42 +44,27 @@ const Form = ({ calculateResult, result }) => {
             />
           </label>
         </Paragraph>
-        <AdditionalInfo>
-          Wymagane pola oznaczone są gwiazdką *
-        </AdditionalInfo>
+        <AdditionalInfo>Wymagane pola oznaczone są gwiazdką *</AdditionalInfo>
         <Paragraph>
           <label>
             <Label> Wybierz walutę:</Label>
-            <Select
-              value={currency}
-              onChange={({ target }) =>
-                setCurrency(target.value)
-              }
-            >
+            <Select value={currency} onChange={({ target }) => setCurrency(target.value)}>
               {currencies.map((currency) => (
-                <option
-                  key={currency.short}
-                  value={currency.short}
-                >
+                <option key={currency.short} value={currency.short}>
                   {currency.name}
                 </option>
               ))}
             </Select>
           </label>
         </Paragraph>
-        <AdditionalInfo italic>
-          Kursy NBP na dzień 19.12.2022r.
-        </AdditionalInfo>
+        <AdditionalInfo italic>Kursy NBP na dzień 19.12.2022r.</AdditionalInfo>
         <Paragraph>
           <Button>Oblicz</Button>
         </Paragraph>
 
         <Result result={result} />
       </Fieldset>
-      <Footer>
-        © Copyright 2022 by Kamil Adach - wszelkie prawa
-        zastrzeżone
-      </Footer>
+      <Footer>© Copyright 2022 by Kamil Adach - wszelkie prawa zastrzeżone</Footer>
     </StyledForm>
   );
 };

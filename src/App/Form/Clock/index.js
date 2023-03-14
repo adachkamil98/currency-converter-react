@@ -1,11 +1,11 @@
-import { StyledClock } from "./styled";
+import { Wrapper } from "./styled";
 import useCurrentDate from "./useCurrentDate.js";
 
 export const Clock = () => {
   const date = useCurrentDate();
 
   return (
-    <StyledClock>
+    <Wrapper>
       {date.toLocaleString(undefined, {
         hour: "2-digit",
         minute: "2-digit",
@@ -15,6 +15,6 @@ export const Clock = () => {
         month: "numeric",
         year: "numeric",
       })}
-    </StyledClock>
+    </Wrapper>
   );
 };
