@@ -21,6 +21,7 @@
 - js
 - react
 - custom Hooks
+- styled-components
 - babel
 - webpack
 - create-react-app
