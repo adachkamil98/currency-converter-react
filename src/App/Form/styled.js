@@ -93,3 +93,11 @@ export const Footer = styled.footer`
   padding: 20px 20px 10px 20px;
   text-align: bottom;
 `;
+
+export const Loading = styled.p`
+  color: ${({ theme }) => theme.color.finlandia};
+`;
+
+export const Failure = styled.p`
+  color: ${({ theme }) => theme.color.cognac};
+`;

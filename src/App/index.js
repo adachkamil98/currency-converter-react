@@ -1,16 +1,17 @@
 import { useState } from "react";
 import Form from "./Form";
-import { currencies } from "./currencies";
+import { useRatesData } from "./Form/useFetchRates";
 
 function App() {
   const [result, setResult] = useState();
+  const ratesData = useRatesData();
 
   const calculateResult = (currency, amount) => {
-    const rate = currencies.find(({ short }) => short === currency).rate;
+    const rate = ratesData.rates[currency];
 
     setResult({
       fromAmount: +amount,
-      toAmount: amount / rate,
+      toAmount: amount * rate,
       currency,
     });
   };
