@@ -26,6 +26,7 @@
 - webpack
 - create-react-app
 - BEM convention
+- API
 
 ## Getting Started with Create React App
 
