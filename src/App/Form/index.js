@@ -37,7 +37,8 @@ const Form = ({ calculateResult, result }) => {
           <Loading>Za chwilę zostaną załadowane kursy walut 😉</Loading>
         ) : ratesData.state === "error" ? (
           <Failure>
-            Ups, coś poszło nie tak. Odśwież stronę lub sprawdź połączenie z Internetem. Jeśli to nie pomoże, to spróbuj ponowownie później.
+            Ups, coś poszło nie tak. Odśwież stronę lub sprawdź połączenie z Internetem.
+            Jeśli to nie pomoże, to spróbuj ponownie później.
           </Failure>
         ) : (
           <>
