@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
+  min-height: 380px;
   background-color: ${({ theme }) => theme.color.swampGreen};
   padding: 20px 20px 0px 20px;
   border-radius: 15px;
@@ -9,6 +10,7 @@ export const StyledForm = styled.form`
 `;
 
 export const Fieldset = styled.fieldset`
+  min-height: 300px;
   border-radius: 15px;
   border-color: ${({ theme }) => theme.color.tussock};
   border-width: 5px;
@@ -26,7 +28,7 @@ export const Legend = styled.legend`
 
 export const AdditionalInfo = styled.p`
   margin-top: 0px;
-  font-size: x-small;
+  font-size: small;
 
   ${({ italic }) =>
     italic &&

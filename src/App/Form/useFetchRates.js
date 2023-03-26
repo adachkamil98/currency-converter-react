@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+const currencyDataURL = "https://api.exchangerate.host/latest?base=PLN"
+
 export const useRatesData = () => {
   const [ratesData, setRatesData] = useState({
     state: "loading",
@@ -8,7 +10,7 @@ export const useRatesData = () => {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const response = await fetch("https://api.exchangerate.host/latest?base=PLN");
+        const response = await fetch(currencyDataURL);
 
         if (!response.ok) {
           throw new Error(response.StatusText);
