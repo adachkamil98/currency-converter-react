@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const currencyDataURL = "https://api.exchangerate.host/latest?base=PLN"
+const currencyDataURL = "https://api.exchangerate.host/latest?base=PLN";
 
 export const useRatesData = () => {
   const [ratesData, setRatesData] = useState({

@@ -18,10 +18,22 @@ import {
 
 import { useRatesData } from "./useFetchRates";
 
-const Form = ({ calculateResult, result }) => {
+const Form = () => {
   const [currency, setCurrency] = useState("USD");
   const [amount, setAmount] = useState("");
+  const [result, setResult] = useState();
+
   const ratesData = useRatesData();
+
+  const calculateResult = (currency, amount) => {
+    const rate = ratesData.rates[currency];
+
+    setResult({
+      fromAmount: +amount,
+      toAmount: amount * rate,
+      currency,
+    });
+  };
 
   const onSubmit = (event) => {
     event.preventDefault();
